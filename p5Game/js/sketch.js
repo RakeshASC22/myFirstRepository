@@ -154,7 +154,7 @@ function preload() {
   cursor = loadImage('Images/cursor.png');
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(500, 500);
   background(0);
   frameRate(60);
   frameCount = 60
@@ -202,7 +202,7 @@ function draw() {
 
     if (keyIsDown(32)) {
       state = 3;
-      speed += .5
+      speed += .2
     }
   } else if (state == 3) {
     if (xPos>=190 && xPos<=220) {
@@ -243,9 +243,7 @@ function draw() {
     if (lives <= 0) {
         state =4;
     }
-    if(score >= 5) {
-        state = 5;
-    }
+   
     else if (yPos < 70) {
       yPos = 300;
       state = 2;
@@ -271,9 +269,9 @@ function draw() {
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
 
 function mouseClicked() {
   if (state == 1) {
@@ -282,9 +280,15 @@ function mouseClicked() {
     }
   }
   if(state == 4) {
+    lives=3;
+    score=0;
+    speed = 2;
     state =1;
   }
   if(state==5) {
+    lives=3;
+    score=0;
+    speed = 2;
     state = 1;
   }
   

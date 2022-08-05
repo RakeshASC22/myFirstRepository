@@ -2,16 +2,35 @@
 <html lang="en">
    <head>
        <meta charset="UTF-8">
-       <srcipt src="css/style.css"></srcipt>
+       <link rel="stylesheet" href="css/style.css">
        <title>My First p5 Project</title>
    </head>
- 
+
    <body>
+    <!-- <style>
+        html, body{
+            margin:0px;
+            border:0;
+            overflow:hidden;
+        }
+    </style> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.10/p5.min.js"></script>
-    <script src="js/data.js" defer></script>
-    <script src="js/sketch.js"></script>
+    
+    <script src="js/data.js" ></script>
+    <script src="js/highScore.js" defer></script>
+    <div id="sketch">
+    <script src="js/sketch.js" defer></script>
+    </div>
+    <div id="high_score">
+        <h1>High Score!</h1>
+        <!-- <div id="name">
+
+        </div> -->
+        <div id="scores">
+
+        </div>
     
    </body>
 </html>
